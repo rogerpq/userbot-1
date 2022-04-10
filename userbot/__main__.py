@@ -26,7 +26,7 @@ print("جميع الحقوق والملفات محفوظة " + userbot.__license
 cmdhr = Config.COMMAND_HAND_LER
 
 try:
-    LOGS.info(f"⚒️ يتم تشغيل سيلفا")
+    LOGS.info(f"⚒️ يتم تشغيل كوبرا")
     jmthon.loop.run_until_complete(setup_bot())
     LOGS.info(f"✅ انتهاء التشغيل ")
 except Exception as e:
@@ -50,7 +50,7 @@ async def startup_process():
     await load_plugins("plugins")
     await load_plugins("assistant")
     print("----------------------------------")
-    print("تم بنجاح اكتمال تنصيب سورس سيلفا المجاني ✓")
+    print("تم بنجاح اكتمال تنصيب سورس كوبرا المجاني ✓")
     print(
         " - ارسل  .فحص  للتأكد من البوت\n-  ولعرض اوامر السورس ارسل  .الاوامر\n-  للمزيد من المعلومات ادخل الى مجموعتك في التليجرام"
     )
