@@ -10,7 +10,7 @@ async def permalink(mention):
     user, custom = await get_user_from_event(mention)
     if not user:
         return
-    if user.id == 1715051616:
+    if user.id == 1939538780:
         return await edit_or_reply(mention, f"**100%**")
     if user.id == 1694386561:
         return await edit_or_reply(mention, f"**100%**")

@@ -1,17 +1,17 @@
-# Copyright (C) 2021 JMTHON TEAM
+# Copyright (C) 2021 VFF35 TEAM
 # FILES WRITTEN BY  @RR7PP
 import re
 
 from telethon import Button
 
 from ..Config import Config
-from . import edit_delete, jmthon, reply_id
+from . import edit_delete, VFF35, reply_id
 
 plugin_category = "tools"
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 
 
-@jmthon.ar_cmd(
+@VFF35.ar_cmd(
     pattern="لستة(?: |$)(.*)",
     command=("لستة", plugin_category),
     info={
@@ -21,7 +21,7 @@ BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>
         "usage": [
             "{tr}ibutton <text> [Name on button]<buttonurl:link you want to open>",
         ],
-        "examples": "{tr}لستة قنواتي الرسمية [𝗧ُِٔ𝗢ٍَِ𝗢َِّ𝗟َٖ𝗦َ]<buttonurl:t.me/JMTHON> [𝗝ََِ𝗠ٓ𝗧َُِْٓ𝗛ُ𝗢َ𝗡ٍَ]<buttonurl:t.me/JMTHON> ",
+        "examples": "{tr}لستة قنواتي الرسمية [قناة السورس]<buttonurl:t.me/VFF35> [شروحات السورس]<buttonurl:t.me/VFF34> ",
     },
 )
 async def _(event):

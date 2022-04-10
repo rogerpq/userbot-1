@@ -1,9 +1,9 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import jmthon, CMD_HELP
+from userbot import VFF35, CMD_HELP
 #
 
-@jmthon.on(admin_cmd(pattern="تيكتوك(?: |$)(.*)"))
+@VFF35.on(admin_cmd(pattern="تيكتوك(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -20,7 +20,7 @@ async def _(event):
             msg = await conv.send_message(r_link)
             details = await conv.get_response()
             video = await conv.get_response()
-            """ كتابة فريق جمثون  @Jmthon """
+            """ كتابة فريق كوبرا  @VFF35 """
             await bot.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
             await event.edit("▾∮ الغـي حـظر هـذا البـوت و حـاول مجـددا @ttsavebot")
@@ -32,7 +32,7 @@ async def _(event):
         await event.delete()
 
 
-# TELEGRAM   :  @Jmthon  - @RR7PP
+# TELEGRAM   :  @VFF35  - @VFF34
 CMD_HELP.update(
     {
         "تيكتوك":".تيكتوك <رابط فيد>\n اكتب الامر مع رابط الفيديو من تيكتوك لتحميله وارساله لك" 

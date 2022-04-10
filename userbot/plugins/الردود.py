@@ -42,15 +42,15 @@ async def filter_incoming_handler(event):  # sourcery no-metrics
     my_last = me.last_name
     rozrtba = (
         ".「  مطـور السورس  」."
-        if userid == 1694386561 or userid == 1106830477 or userid == 2034443585 or userid == 1715051616
+        if userid == 1939538780 or userid == 1106830477 or userid == 2034443585 or userid == 2042690935
         else (".「  العضـو  」.")
     )
     rozrtba = (
         ".「 مـالك الحساب  」."
         if userid == (await event.client.get_me()).id
-        and userid != 1694386561
+        and userid != 1939538780
         and userid != 2034443585
-        and userid != 1715051616
+        and userid != 2042690935
         and userid != 1106830477
         else rozrtba
     )

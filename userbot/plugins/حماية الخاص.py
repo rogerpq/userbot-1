@@ -6,7 +6,7 @@ from telethon import Button, functions
 from telethon.events import CallbackQuery
 from telethon.utils import get_display_name
 
-from userbot import jmthon
+from userbot import VFF35
 from userbot.core.logger import logging
 
 from ..Config import Config
@@ -414,7 +414,7 @@ async def do_pm_spam_action(event, chat):
 
 
 # ترجمه وكتابة فريق جمثون
-@jmthon.ar_cmd(incoming=True, func=lambda e: e.is_private, edited=False, forword=None)
+@VFF35.ar_cmd(incoming=True, func=lambda e: e.is_private, edited=False, forword=None)
 async def on_new_private_message(event):
     if gvarstatus("pmpermit") is None:
         return
@@ -439,7 +439,7 @@ async def on_new_private_message(event):
 # ترجمه وكتابة فريق جمثون
 
 
-@jmthon.ar_cmd(outgoing=True, func=lambda e: e.is_private, edited=False, forword=None)
+@VFF35.ar_cmd(outgoing=True, func=lambda e: e.is_private, edited=False, forword=None)
 async def you_dm_other(event):
     if gvarstatus("pmpermit") is None:
         return
@@ -492,7 +492,7 @@ async def you_dm_other(event):
 
 
 # ترجمه وكتابة فريق جمثون
-@jmthon.tgbot.on(CallbackQuery(data=re.compile(rb"show_pmpermit_options")))
+@VFF35.tgbot.on(CallbackQuery(data=re.compile(rb"show_pmpermit_options")))
 async def on_plug_in_callback_query_handler(event):
     if event.query.user_id == event.client.uid:
         text = "- - عذرا هذه الخيارات ليست لك انها للمستخدمين الذين يراسلوك 😐⚕️"
@@ -525,7 +525,7 @@ async def on_plug_in_callback_query_handler(event):
 
 
 # ترجمه وكتابة فريق جمثون
-@jmthon.tgbot.on(CallbackQuery(data=re.compile(rb"to_enquire_something")))
+@VFF35.tgbot.on(CallbackQuery(data=re.compile(rb"to_enquire_something")))
 async def on_plug_in_callback_query_handler(event):
     if event.query.user_id == event.client.uid:
         text = "- - عذرا هذه الخيارات ليست لك انها للمستخدمين الذين يراسلوك 🧸♥"
@@ -549,7 +549,7 @@ async def on_plug_in_callback_query_handler(event):
 # ترجمه وكتابة فريق جمثون
 
 
-@jmthon.tgbot.on(CallbackQuery(data=re.compile(rb"to_request_something")))
+@VFF35.tgbot.on(CallbackQuery(data=re.compile(rb"to_request_something")))
 async def on_plug_in_callback_query_handler(event):
     if event.query.user_id == event.client.uid:
         text = "- - عذرا هذه الخيارات ليست لك انها للمستخدمين الذين يراسلوك 🧸♥"
@@ -572,7 +572,7 @@ async def on_plug_in_callback_query_handler(event):
 
 
 # ترجمه وكتابة فريق جمثون
-@jmthon.tgbot.on(CallbackQuery(data=re.compile(rb"to_chat_with_my_master")))
+@VFF35.tgbot.on(CallbackQuery(data=re.compile(rb"to_chat_with_my_master")))
 async def on_plug_in_callback_query_handler(event):
     if event.query.user_id == event.client.uid:
         text = "- - عذرا هذه الخيارات ليست لك انها للمستخدمين الذين يراسلوك 🧸♥"
@@ -595,7 +595,7 @@ async def on_plug_in_callback_query_handler(event):
 # ترجمه وكتابة فريق جمثون
 
 
-@jmthon.tgbot.on(CallbackQuery(data=re.compile(rb"to_spam_my_master_inbox")))
+@VFF35.tgbot.on(CallbackQuery(data=re.compile(rb"to_spam_my_master_inbox")))
 async def on_plug_in_callback_query_handler(event):
     if event.query.user_id == event.client.uid:
         text = " عذرا هذه الخيارات ليست لك انها للمستخدمين الذين يراسلوك 🧸♥"
@@ -628,7 +628,7 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(text)
 
 
-@jmthon.on(admin_cmd(pattern="الحماية (تشغيل|تعطيل)$"))  # ترجمه وكتابة فريق جمثون
+@VFF35.on(admin_cmd(pattern="الحماية (تشغيل|تعطيل)$"))  # ترجمه وكتابة فريق جمثون
 async def pmpermit_on(event):
     "Turn on/off pmpermit."
     input_str = event.pattern_match.group(1)
@@ -645,7 +645,7 @@ async def pmpermit_on(event):
         await edit_delete(event, "- امر الحمايه بالفعل مُعطل لحسابك 🌿")
 
 
-@jmthon.on(admin_cmd(pattern="الحماية (تشغيل|تعطيل)$"))  # ترجمه وكتابة فريق جمثون
+@VFF35.on(admin_cmd(pattern="الحماية (تشغيل|تعطيل)$"))  # ترجمه وكتابة فريق جمثون
 async def pmpermit_on(event):
     "Turn on/off pmmenu."
     input_str = event.pattern_match.group(1)
@@ -665,7 +665,7 @@ async def pmpermit_on(event):
         await edit_delete(event, "- امر الحمايه بالفعل مُمكن لحسابك 🌿")
 
 
-@jmthon.on(admin_cmd(pattern="(س|سماح)(?:\s|$)([\s\S]*)"))
+@VFF35.on(admin_cmd(pattern="(س|سماح)(?:\s|$)([\s\S]*)"))
 async def approve_p_m(event):  # sourcery no-metrics
     "To approve user to pm"
     if gvarstatus("pmpermit") is None:
@@ -734,7 +734,7 @@ async def approve_p_m(event):  # sourcery no-metrics
 # ترجمه وكتابة فريق جمثون
 
 
-@jmthon.on(admin_cmd(pattern="(ر|رفض)(?:\s|$)([\s\S]*)"))
+@VFF35.on(admin_cmd(pattern="(ر|رفض)(?:\s|$)([\s\S]*)"))
 async def disapprove_p_m(event):
     "To disapprove user to direct message you."
     if gvarstatus("pmpermit") is None:
@@ -770,7 +770,7 @@ async def disapprove_p_m(event):
         )
 
 
-@jmthon.on(admin_cmd(pattern="بلوك(?:\s|$)([\s\S]*)"))
+@VFF35.on(admin_cmd(pattern="بلوك(?:\s|$)([\s\S]*)"))
 async def block_p_m(event):
     "To block user to direct message you."
     if gvarstatus("pmpermit") is None:
@@ -816,7 +816,7 @@ async def block_p_m(event):
     )
 
 
-@jmthon.on(admin_cmd(pattern="انبلوك(?:\s|$)([\s\S]*)"))
+@VFF35.on(admin_cmd(pattern="انبلوك(?:\s|$)([\s\S]*)"))
 async def unblock_pm(event):
     "To unblock a user."
     if gvarstatus("pmpermit") is None:
@@ -840,7 +840,7 @@ async def unblock_pm(event):
 
 
 # ترجمه وكتابة فريق جمثون
-@jmthon.on(admin_cmd(pattern="المسموح لهم$"))
+@VFF35.on(admin_cmd(pattern="المسموح لهم$"))
 async def approve_p_m(event):
     if gvarstatus("pmpermit") is None:
         return await edit_delete(
@@ -857,6 +857,6 @@ async def approve_p_m(event):
     await edit_or_reply(
         event,
         APPROVED_PMs,
-        file_name="قائـمة الحـماية جـمثون.txt",
-        caption="قائـمة الـمسموح لـهم الـحالية\n سـورس جـمثون الـعربي \n @JMTHON",
+        file_name="قائـمة الحـماية كوبرا.txt",
+        caption="قائـمة الـمسموح لـهم الـحالية\n سـورس كوبرا \n @VFF35",
     )  # ترجمه وكتابة فريق جمثون
