@@ -29,14 +29,14 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             elif ROZ_PIC:
                 result = builder.document(
                     ROZ_PIC,
-                    title="VFF35 - VFF34",
+                    title="JMTHON - USERBOT",
                     text=ROZ,
                     buttons=buttons,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
-                    title="VFF35 - VFF34",
+                    title="JMTHON - USERBOT",
                     text=ROZ,
                     buttons=buttons,
                     link_preview=False,
@@ -56,4 +56,4 @@ async def repo(event):
     await event.delete()
 
 
-# edit by ~ @RR9R7
+# edit by ~ 
