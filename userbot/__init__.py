@@ -21,10 +21,10 @@ StartTime = time.time()
 JMVERSION = "5.2.0"
 
 
-if Config.UPSTREAM_REPO == "SelVa":
-    UPSTREAM_REPO_URL = "https://github.com/JOKER-7X/SelVa"
-elif Config.UPSTREAM_REPO == "SelVa":
-    UPSTREAM_REPO_URL = "https://github.com/JOKER-7X/SelVa"
+if Config.UPSTREAM_REPO == "COBRA":
+    UPSTREAM_REPO_URL = "https://github.com/COBRA1262/userbot"
+elif Config.UPSTREAM_REPO == "COBRA":
+    UPSTREAM_REPO_URL = "https://github.com/COBRA1262/userbot"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
