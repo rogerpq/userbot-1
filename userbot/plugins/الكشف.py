@@ -25,7 +25,7 @@ async def fetch_info(replied_user, event):
             user_id=replied_user.user.id, offset=42, max_id=0, limit=80
         )
     )
-    replied_user_profile_photos_count = "🔺￤هذا المستخدم لم يضع اي صورة"
+    replied_user_profile_photos_count = "⇜ هذا المستخدم لم يضع اي صورة"
     try:
         replied_user_profile_photos_count = replied_user_profile_photos.count
     except AttributeError:
@@ -51,16 +51,16 @@ async def fetch_info(replied_user, event):
     first_name = (
         first_name.replace("\u2060", "")
         if first_name
-        else ("🔺￤هذا المستخدم ليس لديه اسم اول")
+        else ("⇜ هذا المستخدم ليس لديه اسم اول")
     )
     last_name = last_name.replace("\u2060", "") if last_name else (" ")
-    username = "@{}".format(username) if username else ("🔺￤هـذا الشخص ليس لديـه معـرف ")
-    user_bio = "🔺￤هذا المستخدم ليس لديه اي نبـذة" if not user_bio else user_bio
+    username = "@{}".format(username) if username else ("⇜ هـذا الشخص ليس لديـه معـرف ")
+    user_bio = "⇜ هذا المستخدم ليس لديه اي نبـذة" if not user_bio else user_bio
     rozrtba = (
         ".「  مطـور السورس  」."
         if user_id == 1939538780 or user_id == 1939538780 or user_id == 1939538780
         else (".「  العضـو  」.")
-    )  # idea for  ~ @ZlZZl77
+    )  # idea for  ~ 
     rozrtba = (
         ".「 مـالك الحساب  」."
         if user_id == (await event.client.get_me()).id
@@ -70,14 +70,14 @@ async def fetch_info(replied_user, event):
         else rozrtba
     )
     caption = " \n"
-    caption += f"╽<b>- الاسـم ⇜</b> {first_name} {last_name}\n"
-    caption += f"╽<b>- المـعـرف ⇜</b> {username}\n"
-    caption += f"╽<b>- الايـدي  ⇜</b> <code>{user_id}</code>\n"
-    caption += f"╽<b>- عـدد الصـورة ⇜</b> {replied_user_profile_photos_count}\n"
-    caption += f"╽<b>- الـمجموعات المشتـركة ⇜</b> {common_chat}\n"
-    caption += f"╽<b>- الرتبـة ⇜</b>{rozrtba}\n"  # idea for ~ @ZlZZl77
-    caption += f"╽<b>-️ الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n\n"
-    caption += f"╽<b>- رابط حسـابه ⇜</b> "
+    caption += f"⇜<b>- الاسـم ⇜</b> {first_name} {last_name}\n"
+    caption += f"⇜<b>- المـعـرف ⇜</b> {username}\n"
+    caption += f"⇜<b>- الايـدي  ⇜</b> <code>{user_id}</code>\n"
+    caption += f"⇜<b>- عـدد الصـورة ⇜</b> {replied_user_profile_photos_count}\n"
+    caption += f"⇜<b>- الـمجموعات المشتـركة ⇜</b> {common_chat}\n"
+    caption += f"⇜<b>- الرتبـة ⇜</b>{rozrtba}\n"  # idea for ~ @ZlZZl77
+    caption += f"⇜<b>-️ الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n\n"
+    caption += f"⇜<b>- رابط حسـابه ⇜</b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>\n'
     return photo, caption
 
@@ -96,7 +96,7 @@ async def _(event):
     replied_user, error_i_a = await get_user_from_event(event)
     if not replied_user:
         return
-    catevent = await edit_or_reply(event, "🔺￤جار إحضار معلومات المستخدم اننظر قليلا ⚒️")
+    catevent = await edit_or_reply(event, "⇜ جار إحضار معلومات المستخدم اننظر قليلا ⚒️")
     replied_user = await event.client(GetFullUserRequest(replied_user.id))
     user_id = replied_user.user.id
     # some people have weird HTML in their names
@@ -135,10 +135,10 @@ async def _(event):
     else:
         cas = "**Antispam(CAS) Banned :** `Couldn't Fetch`"
     caption = """**معلومات المسـتخدم[{}](tg://user?id={}):
-   🔺￤⚕️ الايدي: **`{}`
-   🔺￤👥**المجموعات المشتركه : **`{}`
-   🔺￤🌏**رقم قاعده البيانات : **`{}`
-   🔺￤🔏**هل هو حساب موثق  : **`{}`
+   ⇜⚕️ الايدي: **`{}`
+   ⇜👥**المجموعات المشتركه : **`{}`
+   ⇜🌏**رقم قاعده البيانات : **`{}`
+   ⇜🔏**هل هو حساب موثق  : **`{}`
 """.format(
         first_name,
         user_id,
@@ -168,13 +168,13 @@ async def who(event):
     replied_user, reason = await get_user_from_event(event)
     if not replied_user:
         return
-    cat = await edit_or_reply(event, "**🔺￤يتم استخراج معلومات المستخدم **")
+    cat = await edit_or_reply(event, "**⇜ يتم استخراج معلومات المستخدم **")
     replied_user = await event.client(GetFullUserRequest(replied_user.id))
     try:
         photo, caption = await fetch_info(replied_user, event)
     except AttributeError:
         return await edit_or_reply(
-            cat, "**🔺￤لم يتم العثور على معلومات لهذا المستخدم **"
+            cat, "**⇜ لم يتم العثور على معلومات لهذا المستخدم **"
         )
     message_id_to_reply = await reply_id(event)
     try:
