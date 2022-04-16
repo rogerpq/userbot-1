@@ -132,7 +132,7 @@ async def rzfun(mention):
     user, custom = await get_user_from_event(mention)
     if not user:
         return
-    if user.id == 2034443585:
+    if user.id == 5133858592:
         return await edit_or_reply(mention, f"**لا عيني محمد يحب بنية 😂🤍**")
     await edit_or_reply(mention, f"**نزوج وماتباوع على غيري 🥺💞 ܰ**")
 
@@ -142,7 +142,7 @@ async def mention(mention):
     user, custom = await get_user_from_event(mention)
     if not user:
         return
-    if user.id == 2034443585:
+    if user.id == 5133858592:
         return await edit_or_reply(mention, f"**لا عيني محمد يحب بنية 😂🤍**")
     await edit_or_reply(mention, f"**طالق طالق بالعشرة 😹😭💕 ܰ**")
 
