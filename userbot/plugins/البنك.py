@@ -18,7 +18,7 @@ except:
 """
 
 PING_PIC = os.environ.get("PING_PIC") or (
-    "https://telegra.ph/file/502a2c9751c3c06222c51.jpg"
+    "https://telegra.ph/file/c0cdf554e1587506a5b53.jpg"
 )
 
 JM_TXT = os.environ.get("PING_TEXT") or "مـن لا يتعلم من الماضي لا يرحمه المستقبل  . 🖤"

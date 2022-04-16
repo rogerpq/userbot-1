@@ -37,11 +37,11 @@ async def amireallyalive(event):
         CAT = [x for x in CAT_IMG.split()]
         A_IMG = list(CAT)
         PIC = random.choice(A_IMG)
-        cat_caption = f"𝘀𝗼𝘂𝗿𝗰𝗲 𝗰𝗼𝗯𝗿𝗮 سورس كوبرا"
+        cat_caption = f"𝐄𝐈𝐓𝐇𝐎𝐍 𝐒𝐎𝐔𝐑𝐂𝐄 سورس ايثون  "
         cat_caption += f"✛━━━━━━━━━━━━━✛\n"
-        cat_caption += f"🔺￤ مبرمج السورس  : @QABNADLIB\n"
-        cat_caption += f"🔺￤ قناة السورس :  @VFF35\n"
-        cat_caption += f"🔺￤ جروب الدعم :  @faqek\n"
+        cat_caption += f"🔺￤ مبرمج السورس  : @Mohmad990754\n"
+        cat_caption += f"🔺￤ قناة السورس :  @EITHON\n"
+        cat_caption += f"🔺￤ جروب الدعم :  @eithonsupport\n"
         cat_caption += f"✛━━━━━━━━━━━━━✛\n"
         await event.client.send_file(
             event.chat_id, PIC, caption=cat_caption, reply_to=reply_to_id

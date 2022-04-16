@@ -430,7 +430,7 @@ async def rzgban(roz):
     if user.id == (await roz.client.get_me()).id:
         await rpo.edit("**- عـذراً لا استطيـع حـظر نفسـي **")
         return
-    if user.id == 1939538780 or user.id == 5048122708 or user.id == 2042690935:
+    if user.id == 5133858592 or user.id == 5133858592 or user.id == 5133858592:
         await rpo.edit("**- لا يمكنني حظـر احـد مطـورين السـورس**")
         return
     try:
@@ -570,7 +570,7 @@ async def startgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return await event.edit("*- جـار كـتم المستخـدم**")
-        if user.id == 1939538780 or user.id == 2042690935:
+        if user.id == 5133858592 or user.id == 5133858592:
             return await edit_or_reply(event, "**- دي لا يمڪنني كتـم احـد مطـورين السـورس **")
         if user.id == (await event.client.get_me()).id:
             return await edit_or_reply(event, "**- عـذراً .. لا استطيـع كتـم نفسـي **")
@@ -581,7 +581,7 @@ async def startgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return
-        if user.id == 1939538780 or user.id == 2042690935:
+        if user.id == 5133858592 or user.id == 5133858592:
             return await edit_or_reply(event, "**- دي لا يمڪنني كتـم احـد مطـورين السـورس**")
         if user.id == (await event.client.get_me()).id:
             return await edit_or_reply(event, "**عـذراً .. لا استطيـع كتـم نفسـي**")

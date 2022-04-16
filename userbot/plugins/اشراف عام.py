@@ -3,7 +3,7 @@
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
-from userbot import VFF35, CMD_HELP
+from userbot import EITHON, CMD_HELP
 from userbot.utils import admin_cmd
 #
 
@@ -32,7 +32,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("▾∮ هنالك خطأ يرجى تبليغنا @VFF35", str(err))
+            return await event.edit("▾∮ هنالك خطأ يرجى تبليغنا @EITHON", str(err))
     return user_obj, extra
 
 
@@ -52,7 +52,7 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@VFF35.on(admin_cmd(pattern="ارفع ?(.*)"))
+@EITHON.on(admin_cmd(pattern="ارفع ?(.*)"))
 async def gben(userbot):
     dc = razan = userbot
     i = 0
@@ -107,7 +107,7 @@ async def gben(userbot):
     )
 
 
-@VFF35.on(admin_cmd(pattern="نزل ?(.*)"))
+@EITHON.on(admin_cmd(pattern="نزل ?(.*)"))
 async def gben(userbot):
     dc = razan = userbot
     i = 0

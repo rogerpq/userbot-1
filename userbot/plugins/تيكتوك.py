@@ -32,7 +32,7 @@ async def _(event):
         await event.delete()
 
 
-# TELEGRAM   :  @VFF35  - @VFF34
+# TELEGRAM   :  @EITHON  - @EITHON
 CMD_HELP.update(
     {
         "تيكتوك":".تيكتوك <رابط فيد>\n اكتب الامر مع رابط الفيديو من تيكتوك لتحميله وارساله لك" 

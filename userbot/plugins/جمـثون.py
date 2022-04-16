@@ -7,7 +7,7 @@ from userbot.utils import admin_cmd
 async def wspr(event):
     if event.fwd_from:
         return
-    VFF35b = event.pattern_match.group(1)
+    EITHON = event.pattern_match.group(1)
     rrrd7 = "@nnbbot"
     if event.reply_to_msg_id:
         await event.get_reply_message()

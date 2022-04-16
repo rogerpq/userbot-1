@@ -9,8 +9,8 @@ from userbot import jmthon
 from ..core import check_owner
 from ..Config import Config
 
-ROZ_IC = "https://telegra.ph/file/51ceb227677df6f830aa7.jpg"
-ROE = "** هـذه هي قائمة اوامـر سـورس كوبرا**"
+ROZ_IC = "https://telegra.ph/file/c0cdf554e1587506a5b53.jpg"
+ROE = "** هـذه هي قائمة اوامـر سـورس ايثون**"
 
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
 
